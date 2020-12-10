@@ -11,7 +11,7 @@ fun main(args: Array<String>) {
 
     // Player status
     printPlayerStatus(auraColor, isBlessed, name, healthStatus)
-    
+
     castFireball((1..50).random())
 }
 
