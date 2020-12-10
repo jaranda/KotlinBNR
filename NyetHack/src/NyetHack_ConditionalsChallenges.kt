@@ -27,7 +27,8 @@ fun main(args: Array<String>) {
             in 0..5   -> "RED"
             in 6..10  -> "ORANGE"
             in 11..15 -> "PURPLE"
-            else -> "GREEN"
+            in 16..20 -> "GREEN"
+            else -> ""
         }
     } else "NONE"
 
@@ -74,7 +75,7 @@ fun main(args: Array<String>) {
     }
     print("\n")
 
-    // From the
+    // From the forum: https://forums.bignerdranch.com/t/question-challenge-configureable-status-format/15092/10
     println(mapOf("HP" to "HP: $healthPoints", "A" to "Aura: $auraColor", "H\\b" to "$name $healthStatus", "B" to "Blessed: ${if (isBlessed) "YES" else "NO"}").toList().fold("(HP)(A) -> (B): (H)") {
         acc, (symbol, value) -> acc.replace(symbol.toRegex()) { value }
     })
