@@ -2,3 +2,7 @@
 *.class
 
 *.kotlin_module
+
+.DS_Store
+
+audio/
